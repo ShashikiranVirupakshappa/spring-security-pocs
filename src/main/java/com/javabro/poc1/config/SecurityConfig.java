@@ -39,7 +39,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) {
         return httpSecurity.authorizeHttpRequests(request ->
                         //request.requestMatchers("/get").authenticated())
-                        request.anyRequest().).oauth2ResourceServer()
+                        request.anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .build();
     }
