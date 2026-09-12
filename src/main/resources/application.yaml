@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: POC1
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: welcome123
+    url: jdbc:mysql://localhost:3306/spring-security-db
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    com.javabro.poc1: TRACE
+
